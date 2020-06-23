@@ -15,9 +15,9 @@
     display: -webkit-flex;
     display: flex;
     /* Center vertically */
-    align-items: center;
+   
     /*Center horizontaly */
-    justify-content: center;
+   
 
     /*Center horizontaly ie */
     -ms-flex-pack: center;
@@ -180,6 +180,23 @@
     }
 }
 
+.presentation-title1{
+    font-size: 5em;
+    font-weight: 700;
+    margin: 0;
+     padding-left: 6.5em;
+     padding-top: 1.1em;
+    color: #FFFFFF;
+     background: #fbf8ec;
+    background: -moz-linear-gradient(to bottom, #FFFFFF 65%, #ffffff 100%);
+    background: -webkit-linear-gradient(to bottom, #FFFFFF 65%,#abc3ce 100%);
+    background: -ms-linear-gradient(to bottom, #FFFFFF 65%,#abc3ce 100%);
+    background: -o-linear-gradient(to bottom, #FFFFFF 65%,#abc3ce 100%);
+    background: linear-gradient(to bottom, #FFFFFF 65%,#abc3ce 100%);
+
+    -webkit-background-clip: text;
+    
+}
 .presentation-title{
     font-size: 8em;
     font-weight: 700;
@@ -204,7 +221,7 @@
     position: absolute;
     text-align: center;
     top: 100vh;
-    margin-top: -60px;
+    margin-top: -150px;
     padding: 0 15px;
     width: 100%;
     color: rgba(255, 255, 255, 0.5);
