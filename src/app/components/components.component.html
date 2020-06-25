@@ -26,11 +26,155 @@
         <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
        
         <h1 class=" presentation-subtitle category-absolute  ml-auto mr-auto">BACK TO THE ORIGINS
-        <!-- <h6 class="category category-absolute">Designed and coded by -->
-
-         
-        </h1>
+        <!-- <h6 class="category category-absolute">Designed and coded by --></h1>
     </div>
+<div style="background-image: url('assets/img/background.jpg');" >
+    <div class="mx-auto" style="width: 200px;">
+        <!-- Content here -->
+        <h2>Trending</h2>
+        
+        
+      </div>
+
+  
+
+
+      <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+        <ng-template ngbSlide *ngFor="let img of images; index as i">
+          <div class="carousel-caption">
+            <h3><b>{{img.title}}</b></h3>
+            <h3><b><i class="fa fa-inr" aria-hidden="true"></i>{{img.cost}}</b></h3>
+          </div>
+          <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+            <div class="picsum-img-wrapper">
+              <img [src]="img.img" style="width: 100%; height: 70vh" alt="My image {{i + 1}} description">
+            </div>
+          </a>
+        </ng-template>
+      </ngb-carousel>
+      
+      <hr>
+      
+
+
+ 
+ 
+
+
+      <div class="mx-auto" style="width: 200px;">
+        <!-- Content here -->
+        <h2>Categories </h2>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <img src="assets/img/handcraft.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Handicraft</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/img/tech.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Tech</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/img/clothes.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Clothing</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mx-auto" style="width: 200px;">
+        <!-- Content here -->
+       <h2></h2>
+      </div>
+
+      <div class="card-deck">
+        <div class="card">
+          <img src="assets/img/books.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Books</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/img/groceries.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Groceries</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/img/editor.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Editor's Choice</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="media">
+        <img class="mr-3" src="..." alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0">Media heading</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </div>
+
+
+
+
+      <!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+
+          <!-- Video -->
+          <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vlDzYIIOYmM" allowfullscreen></iframe>
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+
+</div>
+
+  
+  <!-- Footer -->
+    <!--
     <div class="main">
       <app-basicelements></app-basicelements>
       <app-navigation></app-navigation>
@@ -377,4 +521,6 @@
             </div>
         </div>
     </div>
+
+    -->
 </div>

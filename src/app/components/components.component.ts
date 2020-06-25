@@ -1,5 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { NgbDateStruct, NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-components',
@@ -8,10 +8,41 @@ import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
     ngb-progressbar {
         margin-top: 5rem;
     }
+
     `]
 })
 
 export class ComponentsComponent implements OnInit {
+
+      images = [{img:"assets/img/1.jpeg",title:"Herbal Cosmetic products pack by Biotique",cost:799},{img:"assets/img/2.jpeg",title:"Phone Casings by Q-Tech",cost:399},{img:"assets/img/3.jpeg",title:"Organic Tea by Chopra Center",cost:399},{img:"assets/img/4.jpeg",title:"Best seller combo by Nayantara Sahgal",cost:499}];
+        
+  paused = false;
+  unpauseOnArrow = false;
+  pauseOnIndicator = false;
+  pauseOnHover = true;
+
+  @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
+
+  togglePaused() {
+    if (this.paused) {
+      this.carousel.cycle();
+    } else {
+      this.carousel.pause();
+    }
+    this.paused = !this.paused;
+  }
+
+  onSlide(slideEvent: NgbSlideEvent) {
+    if (this.unpauseOnArrow && slideEvent.paused &&
+      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)) {
+      this.togglePaused();
+    }
+    if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+      this.togglePaused();
+    }
+  }
+
+
     page = 4;
     page1 = 5;
     focus;
